@@ -4,7 +4,6 @@ console.log('Greetings from Node and index.js! 🙃');
 const express = require('express');
 
 // // Let's test that Express is working as expected:
-// console.log(express);
 // Let's create a new App
 const app = express();
 nunjucks.configure({
@@ -14,11 +13,6 @@ nunjucks.configure({
 
 // We want express to run on this port
 const port = 3000;
-// app.get('/', (request, response) => {
-//     console.log('Request: /');
-//     // response.send('Hello World, from the Express homepage!');
-//     response.sendFile(__dirname + '/index.html');
-// });
 app.get('/', (request, response) => {
     response.render('./views/index.html.njk');
 });
